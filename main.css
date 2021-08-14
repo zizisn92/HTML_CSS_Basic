@@ -1,0 +1,43 @@
+:root
+{
+    --text-color:orinage;
+    
+}
+h1
+{
+    color:var(--text-color);
+}
+h2
+{
+    color:var(--text-color);
+}
+h3
+{
+    color:var(--text-color);
+}
+
+.box
+{
+    --size-witdh: 100px;
+    --size-height: 100px;
+    background-color: var(--text-color);
+    width: var(--size-height);
+    height: var(--size-witdh);
+
+}
+
+.box1
+{
+    --backgound-color:black;
+background-color: var(--backgound-color);
+}
+.box2
+{
+    --backgound-color:yellow;
+    background-color: var(--backgound-color);
+}
+.box3
+{
+    --backgound-color:red;
+    background-color: var(--backgound-color);
+}

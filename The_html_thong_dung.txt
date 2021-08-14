@@ -1,0 +1,118 @@
+a)Thẻ html thông dụng:
+1. h1 - h6: heading
+2. p - paragraph (Đoạn văn)
+3. img (Ảnh) 
+    + src: Nguồn
+    + alt: Nội dung khi ảnh bị lỗi
+4. a - anchor (Mỏ neo / Thẻ đặt liên kết)
+5. ul,ol,li - Unordered List, Ordered List, List Item (Danh sách)
+6. table (Bảng)
+    + thead (Đầu bảng)
+        * th - table heading (Tiêu đề)
+    + tbody (Thân bảng)
+        * tr - table row (Dòng bảng)
+        * td -  defines a standard cell in an HTML table (Xác định 1 ô tiêu chuẩn trong 1 bảng)
+7. Input (Được sử dụng cho người dùng nhập hay chọn thông tin)
+8. Button (Nút)
+9. Div (Tạo khối bao quanh phần tử khác)
+
+b) Attribute (Thuộc tính của các thẻ html, nằm trong thẻ mở)
+
+c) Các cách sử dụng CSS trong html
+1. External VD:<link rel="stylesheet" href="main.css"> (Dùng thẻ link để lấy đường dẫn file css)
+2. Internal (Đặt ở đâu cũng đươc, nhưng nên đặt trong thẻ head, nằm trong căp thẻ <sytle></style>)
+3. Inline (Viết Attribute sytle trong thẻ mở html cần css, ngăn cách giá trị khác thì dùng dấu ";")
+
+d) ID và Class (CSS selector - Cách gọi element(phần tử) trong html để CSS)
++ Id - Identification: Trong thẻ html id+"Ten Id", trong file CSS sử dụng "#" + tên Id
+    VD: <h1 id="first-heading"><h1>
+        #first-heading
+        {
+            color:red;
+        }
++ Class: Trong thẻ html dùng class+"Ten Class", trong file CSS sử dụng dấu "." + tên Class
+    VD: <h1 class="second-heading">1<h1>
+        <h1 class="second-heading">2<h1>
+        .second-heading
+        {
+            color:red;
+        }
+
+e) Piority? (Độ ưu tiên khi sử dụng CSS)
+1. Internal, External?
+    + Không có sự ưu tiên (Cái nào viết CSS mới hơn thì được gọi)
+2. Inline - 1000 (1000 Point)
+3. #id - 100 (1000 Point)
+4. .class - 10 (10 Point)
+5. tag - 1 (1 Point)
+6. Equal specificity? (Sự giống nhau khi gọi element selector giống nhau)
+    + Không có sự ưu tiên (Cái nào viết CSS mới hơn thì được gọi)
+    VD: h1#id-heading.heading-class: Tìm thẻ h1 có id là id-heading, class là heading-class (Tổng điểm 100+10+1=111 Point)
+7. Universal selector and inherited (0 Points)
+    + *
+    {
+        color:red;
+    }
+    Chung toàn bộ thẻ
+8. Important (10000 Point)
+
+f) CSS Vatiable? Đặt biến trong CSS
+    + file .css
+    // Biến toàn cục (Trong thẻ :root)
+    :root
+    {
+        --text-color: red;
+    }
+    h1
+    {
+        color: var(--text-color);
+    }
+    // Biến cục bộ
+    h2
+    {
+         --text-color: red;
+        color: var(--text-color);
+    }
+
+g) Đơn vị trong CSS
+1. Absolute units (Đơn vị tuyệt đối)
+    + px - (pixel)
+    + pt:
+    + cm:
+    + mm:
+    + inch:
+    + pc:
+2. Relative units (Đơn vị tương đối)
+    + %: Phụ thuộc kích thước thằng cha (Thẻ chứa nó) 
+    + rem - root element: Phụ thuộc thẻ root - thẻ <html>
+    html
+    {
+        font-size: 20px;
+    }
+    h1
+    {
+        font-size: 2rem;
+    } 
+    + em:  Phụ thuộc thẻ gần nhất chứa nó có thuộc tính đang css
+    div
+    {
+        font-size: 20px;
+    }
+    h1
+    {
+        font-size: 2em;
+    } 
+    + vw - viewport width: (Chiều ngang trình duyệt) - Không phụ thuộc thẻ chứa nó
+    + vh - viewport height: (Chiều dọc trình duyệt) - Không phụ thuộc thẻ chứa nó
+    + vmin:
+
+h) CSS Padding ()
+    + padding : Đệm thêm vào làm background dày lên.
+    + padding: 10px
+        * Nếu 1 tham số: giá trị trên/dưới/trái/phải là 10px
+    + padding: 10px 5px 
+        * Nếu 2 tham số: giá trị trên/dưới là 10px, giá trị trái/phải là 5px
+    + padding: 10px 5px 8px
+        * Nếu 3 tham số: Giá trị đầu tiên bên trên, giá trị thứ 2 là bên trái/phải, thứ 3 là bên dưới
+    + padding: 10px 5px 8px 12px
+        * Nếu 4 tham số : Trên -> Phải -> Dưới -> Trái
